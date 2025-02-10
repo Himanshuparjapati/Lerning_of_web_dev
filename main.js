@@ -4,6 +4,8 @@ let count = 0;
 console.log(button);
 if (button) {
     button.addEventListener("click", (e) => {
+        e.stopPropagation();
+
         count += 1; // Corrected increment operation
         let color = getRandomHexColor();
         document.getElementById("box").style.backgroundColor = color;
@@ -21,18 +23,18 @@ function getRandomHexColor() {
 
 console.log(getRandomHexColor());
 
-// if(body){
-// console.log(body);
-// body.addEventListener("click",(e)=>{
-//      count = 0;
-//      let defaultColor = "aqua";
-//      body.style.backgroundColor= defaultColor;
-//      body.innerHTML=`Click`
-//     console.log("reset the all value");
+if(body){
+console.log(body);
+body.addEventListener("click",(e)=>{
+     count = 0;
+     let defaultColor = "aqua";
+     document.getElementById("box").style.backgroundColor=defaultColor;
+          button.innerHTML=`Click`
+    console.log("reset the all value");
     
-// });
+});
 
-// }else{
-//     console.log("body is not found in whole html code");
+}else{
+    console.log("body is not found in whole html code");
     
-// }
+}

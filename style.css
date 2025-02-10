@@ -16,6 +16,15 @@
    block-size: 200px;
 }
 
+/* .reset-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    inline-size: 100px; 
+   block-size: 100px;
+} */
+
 body, html {
     block-size: 100%;
     margin: 0;
